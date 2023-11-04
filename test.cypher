@@ -16,7 +16,7 @@ CREATE (yellowThaiCurry:Recipe { name: 'Yellow Thai Curry', urls: ['https://www.
 CREATE (thaiPanangChickenCurry:Recipe { name: "Thai Panang Chicken Curry", urls: "https://www.youtube.com/watch?v=QraggvxNMrk"})
 CREATE (coldSobaWithPerillaOilDressing:Recipe { name: "Cold Soba With Periall Oil dresssing"})
 CREATE (sesameNoodleRecipe:Recipe { name: "The Best Sesame Noodles From Korea Under 6 Minutes!",urls:["https://www.youtube.com/watch?v=HZ1VIYNAeR0"]})
-CREATE (chickenThaiRedCurry:Recipe { name: 'Chicken Thai Red Curry', urls: ['https://theflavoursofkitchen.com/wprm_print/104534'] });
+CREATE (chickenThaiRedCurry:Recipe { name: 'Chicken Thai Red Curry', urls: ['https://theflavoursofkitchen.com/wprm_print/104534'] })
 
 // stores
 CREATE (thanhSonTofu:Store { name: "Thanh Son Tofu" , urls:["https://www.yelp.com/biz/thanh-son-tofu-seattle-3"]})
@@ -81,7 +81,7 @@ CREATE (beets:Product { name: "Beets" })
 CREATE (beetsCanned:Product { name: "Beets - Canned" })
 CREATE (blueberriesFrozenUponinaBag:Product { name: "Blueberries - frozen uponina bag" })
 CREATE (bokChoy:Product { name: "Bok Choy" })
-CREATE (bonelessChickenThighs:Product {name: 'Boneless Chicken Thighs'});
+CREATE (bonelessChickenThighs:Product {name: 'Boneless Chicken Thighs'})
 CREATE (bonitoFlakes:Product {   name: "Bonito Flakes",   urls: ["https://chefjacooks.com/en/wprm_print/7506",          "https://www.amazon.com/Kaneso-Tokuyou-Hanakatsuo-Bonito-Flakes/dp/B0052BGLMS",          "https://www.google.com/search?sca_esv=577907868&sxsrf=AM9HkKmChgo0Ktu9IlnGTSWuzmK5YqQsiQ:1698696041201&q=Bonito+Flakes&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjy0Pfwx56CAxUBODQIHey0BwcQ0pQJegQIDhAB&biw=1440&bih=758&dpr=2"  ]})
 CREATE (boullionBeef:Product { name: "Boullion - Beef" })
 CREATE (boullionVegetableBrothPowdered:Product { name: "Boullion - Vegetable Broth Powdered" })
@@ -254,7 +254,7 @@ CREATE (kikkomanJapaneseNoodleSoupBaseHonTsuyu:Product {   name: "Kikkoman Japan
 CREATE (kombucha:Product { name: "Kombucha" })
 CREATE (leeKumKeeSoySaucePremiumDarkBottle:Product { name: "Lee Kum Kee Soy Sauce Premium Dark Bottle" })
 CREATE (lemon:Product { name: "Lemon" })
-CREATE (lemonGrass:Product {name: 'Lemon Grass'});
+CREATE (lemonGrass:Product {name: 'Lemon Grass'})
 CREATE (lemonJuice:Product { name: "Lemon Juice" })
 CREATE (lemonZestGratedLemonRind:Product { name: "Lemon Zest (grated lemon rind)" })
 CREATE (lemongrass3Stalks:Product { name: "Lemongrass - 3 stalks" })
@@ -263,7 +263,7 @@ CREATE (lentilsBlackBeluga:Product { name: "Lentils - Black, Beluga" })
 CREATE (lentilsBrown:Product { name: "Lentils - Brown" })
 CREATE (lentilsGreen:Product { name: "Lentils (Green)" })
 CREATE (lettucesRomaine:Product { name: "Lettuces - Romaine" })
-CREATE (lightBrownSugar:Product {name: 'Light Brown Sugar'});
+CREATE (lightBrownSugar:Product {name: 'Light Brown Sugar'})
 CREATE (lime:Product { name: "Lime" })
 CREATE (limeJuice:Product { name: "Lime juice" })
 CREATE (limeLeavesKaffir:Product { name: "Lime Leaves - Kaffir" })
@@ -289,7 +289,7 @@ CREATE (myntzes:Product { name: "Myntzes" })
 CREATE (noodlesLasagna:Product { name: "Noodles - Lasagna" })
 CREATE (nutmeg:Product { name: "Nutmeg" })
 CREATE (oOrganicsOrganicCoconutOilVirginUnrefined:Product { name: "O Organics Organic Coconut Oil Virgin Unrefined" })
-CREATE (oil:Product {name: 'Oil'});
+CREATE (oil:Product {name: 'Oil'})
 CREATE (oilAvocado:Product { name: "Oil - Avocado" })
 CREATE (oilOliveExtraVirgin:Product { name: "Oil - Olive - Extra Virgin" })
 CREATE (oliveOrCoconutOil:Product { name: "Olive or coconut oil" })
@@ -353,7 +353,7 @@ CREATE (raisinsBulkBabyBulk:Product { name: "Raisins - Bulk baby, bulk" })
 CREATE (ramenNoodlesDry:Product { name: "Ramen Noodles - Dry" })
 CREATE (redBellPepper:Product { name: "Red bell pepper" })
 CREATE (redChilliPeppers:Product { name: "Red Chilli peppers" })
-CREATE (redCurryPaste:Product {name: 'Red Curry Paste'});
+CREATE (redCurryPaste:Product {name: 'Red Curry Paste'})
 CREATE (redGreenYellaPeppers:Product { name: "Red, Green, Yella Peppers" })
 CREATE (redLentils:Product { name: "Red Lentils" ,urls: ["https://images.albertsons-media.com/is/image/ABS/127100073-ECOM","https://www.google.com/search?q=don+pancho+gorditas&sxsrf=ALiCzsbRwUHe7CL6uuSFX0okDfWkDvjqnQ:1665076315963&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjO0djSjMz6AhVLMjQIHZGcAbAQ_AUoAXoECAIQAw&biw=1107&bih=574&dpr=2.5#imgrc=Z2KBPh70c6uKAM"]})
 CREATE (refriedBeansVegetarianNoLardTard:Product { name: "Refried beans - vegetarian / no lard tard!" })
@@ -413,7 +413,7 @@ CREATE (squashYellowCrookneck:Product { name: "Squash - Yellow Crookneck" })
 CREATE (squid:Product { name: "Squid" })
 CREATE (sriracha:Product { name: "Sriracha" })
 CREATE (stockVegetableDry:Product { name: "Stock - Vegetable - dry" })
-CREATE (stockWater:Product {name: 'Stock / Water'});
+CREATE (stockWater:Product {name: 'Stock / Water'})
 CREATE (strongRootsKaleQuinoaBurger:Product { name: "Strong Roots Kale & Quinoa Burger" })
 CREATE (sugarPalm:Product { name: "Sugar - Palm" })
 CREATE (sugarPureCane:Product { name: "Sugar - Pure Cane" })
@@ -491,21 +491,21 @@ CREATE (coldSobaWithPerillaOilDressing)-[:CONTAINS]->(buckwheatSoba)
 CREATE (coldSobaWithPerillaOilDressing)-[:CONTAINS]->(japaneseNori)
 CREATE (coldSobaWithPerillaOilDressing)-[:CONTAINS]->(perillaOil)
 
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '500 grams' }]->(bonelessChickenThighs);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 tablespoons' }]->(oil);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '4 tablespoons' }]->(redCurryPaste);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ Onion sliced' }]->(onion);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ tablespoon Garlic minced' }]->(garlic);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 teaspoon Ginger minced' }]->(ginger);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 stalk' }]->(lemonGrass);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 teaspoon' }]->(fishSauce);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ tablespoon' }]->(lightBrownSugar);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 Red Bell Pepper' }]->(redBellPepper);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 cup' }]->(zucchini);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1.5 cup' }]->(coconutMilk);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ cup' }]->(stockWater);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 teaspoon' }]->(lemonJuice);
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '8-10 leaves' }]->(thaiBasil);
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '500 grams' }]->(bonelessChickenThighs)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 tablespoons' }]->(oil)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '4 tablespoons' }]->(redCurryPaste)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ Onion sliced' }]->(onion)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ tablespoon Garlic minced' }]->(garlic)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 teaspoon Ginger minced' }]->(ginger)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 stalk' }]->(lemonGrass)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 teaspoon' }]->(fishSauce)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ tablespoon' }]->(lightBrownSugar)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 Red Bell Pepper' }]->(redBellPepper)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1 cup' }]->(zucchini)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '1.5 cup' }]->(coconutMilk)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '½ cup' }]->(stockWater)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '2 teaspoon' }]->(lemonJuice)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: '8-10 leaves' }]->(thaiBasil)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '1 tbsp.' }]->(coconutOil)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '1/2' }]->(yellowOnion)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '2 cloves' }]->(garlic)
@@ -519,7 +519,7 @@ CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '3 c.' }]->(chickenBroth)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '2 tbsp.' }]->(brownSugar)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: '1 tsp.' }]->(fishSauce)
 CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: 'if desired' }]->(cilantro)
-CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: 'with rice' }]->(rice);
+CREATE (yellowCoconutCurry)-[:CONTAINS { quantity: 'with rice' }]->(rice)
 CREATE (thaiCurry1)-[:CONTAINS]->(cilantro)
 CREATE (thaiCurry1)-[:CONTAINS]->(clovesGarlic)
 CREATE (thaiCurry1)-[:CONTAINS]->(chickenStock)
