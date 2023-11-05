@@ -356,7 +356,7 @@ CREATE (organicSaladFreshHerbBlend:Product { name: "Organic Salad Fresh Herb Ble
 CREATE (oysterMushrooms:Product { name: "Oyster Mushrooms", type: "Mushroom" })
 CREATE (oysterSauce:Product { name: "Oyster Sauce", type: "Oyster Sauce" })
 CREATE (padThaiSauce:Product { name: "Pad Thai Sauce", type: "Pad Thai Sauce" })
-CREATE (tamarind:Product { name: 'Tamarind', type: 'Tamarind', urls:["https://youtu.be/5odVRW9ldzU?t=474"]})
+CREATE (tamarind:Product { name: 'Tamarind', type: 'Tamarind', urls:["https://youtu.be/5odVRW9ldzU?t=474","https://www.youtube.com/@PailinsKitchen/search?query=tamarind"]})
 CREATE (riceNoodles:Product { name: 'Dry rice noodles', type: 'Noodles' })
 CREATE (daikonRadish:Product { name: 'SWEET preserved daikon radish', type: 'Radish' })
 CREATE (eggs:Product { name: 'Eggs', type: 'Eggs' })
