@@ -11,9 +11,9 @@ for the relation below, but in the product remove the quantity
 next, camelcase the product name and create cypher query to create
 node from product name. Here's an example:
 
-CREATE (thaiBasil:Product { name: "Thai basil" ,urls: ["https://www.fredmeyer.com/p/simple-truth-organic-thai-basil/0001111001922"]})
-CREATE (thaiChilies:Product { name: "Thai chilies"})
-CREATE (thaiEggplant:Product { name: "Thai Eggplant" })
+CREATE (thaiBasil:Product { name: "Thai basil" ,urls: ["https://www.fredmeyer.com/p/simple-truth-organic-thai-basil/0001111001922"]}, type: "Basil")
+CREATE (thaiChilies:Product { name: "Thai chilies", type: "Chilies" })
+CREATE (thaiEggplant:Product { name: "Thai Eggplant", type: "Eggplant" })
 
 For each product node you created, create an additional relation that
 indicates that this recipe contains these products. In the relation,
@@ -25,59 +25,89 @@ CREATE (thaiCurry1)-[:CONTAINS { quantity: '1 lb' }]->(chickenThigh)
 
 where here thaiCurry1 is the recipe and chickenStock is an ingredient
 
+Also create an author node similar to this:
+CREATE (pailinChongchitnant:Person { name: 'Pailin Chongchitnant', urls: [""] })
+
 Ok here goes:
+https://www.simplyrecipes.com/recipes/tomatillo_salsa_verde/?print
 
 the recipe url is here:
-https://cookieandkate.com/sugar-snap-pea-and-carrot-soba-noodles/print/23556/
 
-the recipe is here:
+Tomatillo Salsa Verde
+PREP TIME
+20 mins
+COOK TIME
+15 mins
+TOTAL TIME
+35 mins
+SERVINGS
+12 servings
+YIELD
+3 cups
+To cook the tomatillos, you can either roast them in the oven, brown them on the stovetop, or boil them. Roasting in the oven or browning on the stovetop will deliver more flavor. Each way works, though boiling is a more common way to cook the tomatillos.
 
-Print
-Sugar Snap Pea and Carrot Soba Noodles
-Author: Cookie and Kate Prep Time: 25 mins Cook Time: 5 mins Total Time: 30 minutes Yield: 6 1x Category: Main Cuisine: Asian
-★★★★★ 4.8 from 67 reviews
-A healthy, vibrant soba noodle recipe full of fresh springtime produce. Feel free to trade in other seasonal vegetables for the sugar snap peas, like chopped bell pepper. This recipe yields about six servings and the leftovers don’t keep particularly well, so halve the ingredients if you’re not serving a crowd.
+Garlic is optional. You can either cook a few cloves with the tomatillos in any of these steps, or add one or two raw garlic cloves when you go to blend the salsa.
 
-Sugar snap pea and carrot soba noodles recipe
-SCALE
-1x
-2x
-3x
-INGREDIENTS
-Soba
-6 ounces soba noodles or spaghetti noodles of choice
-2 cups frozen organic edamame
-10 ounces (about 3 cups) sugar snap peas or snow peas
-6 medium-sized carrots, peeled
-1/2 cup chopped fresh cilantro (about 2 handfuls)
-1/4 cup sesame seeds
-Ginger-sesame sauce
-1/4 cup reduced-sodium tamari or soy sauce
-2 tablespoons quality peanut oil or extra-virgin olive oil
-1 small lime, juiced
-1 tablespoon toasted sesame oil
-1 tablespoon honey or agave nectar
-1 tablespoon white miso*
-2 teaspoons freshly grated ginger
-1 teaspoon chili garlic sauce or sriracha
+Ingredients
+1 1/2 pounds tomatillos (about 12 medium)
 
-INSTRUCTIONS
-To prepare the vegetables: Use a chef’s knife to slice the peas in half lengthwise (or just roughly chop them). Slice the carrots into long, thin strips with a julienne peeler, or slice them into ribbons with a vegetable peeler.
-To make the sauce: whisk together the ingredients in a small bowl until emulsified. Set aside.
-Bring two big pots of water to a boil. In the meantime, toast the sesame seeds: Pour the sesame seeds into a small pan. Toast for about 4 to 5 minutes over medium-low heat, shaking the pan frequently to prevent burning, until the seeds are turning golden and starting to make popping noises.
-Once the pots of water are boiling: In one pot, cook the soba noodles just until al dente, according to package directions (probably about 5 minutes), then drain and briefly rinse under cool water. Cook the frozen edamame in the other pot until warmed through (about 4 to 6 minutes) but before draining, toss the halved peas into the boiling edamame water and cook for an additional 20 seconds. Drain.
-Combine the soba noodles, edamame, snap peas and carrots in a large serving bowl. Pour in the dressing and toss with salad servers. Toss in the chopped cilantro and toasted sesame seeds. Serve.
-NOTES
-*I used Miso Master brand’s reduced-sodium sweet white miso. It’s in the refrigerated section near the tofu. Omit if you can’t find it, but it provides a nice boost of flavor.
-Make it vegan: Sub agave nectar for the honey.
-Make it gluten free: Buy certified gluten-free, all buckwheat soba noodles (or gluten-free spaghetti) and use tamari instead of regular soy sauce. Make sure your miso is gluten free, if using.
-Storage suggestions: This dish keeps decently well, covered and refrigerated, for a couple of days, BUT here’s a better way, courtesy of Janet: make a batch, store the salad and dressing separately until ready to eat, and then grab one or two portions and add some dressing. Either way, you can serve leftovers chilled or gently rewarmed. Wake up leftovers with a dash of additional tamari or lime juice and fresh cilantro leaves.
-Change it up: Feel free to substitute other seasonal produce for the sugar snap peas, or skip them altogether for less prep work. Chopped, raw bell pepper would be a nice addition this summer.
-Recommended equipment: This julienne peeler is a fun tool that turns carrots (and zucchini and cucumbers) into thin vegetable noodles.
-If you love this recipe: I have more soba noodle recipes over here!
+1/2 cup chopped white onion
 
-▸ NUTRITION INFORMATION
-Did you make this recipe?
-Please let me know how it turned out for you! Leave a comment below and share a picture on Instagram with the hashtag #cookieandkate.
-Recipe from Cookie and Kate: https://cookieandkate.com/sugar-snap-pea-and-carrot-soba-noodles/
+2 cloves (or more) garlic, optional
 
+1/2 cup chopped cilantro leaves and stems
+
+1 tablespoon fresh lime juice
+
+2 jalapeño or serrano peppers , stemmed, seeded and chopped (you can use whole for more heat if you want)
+
+Salt to taste
+
+Method
+Oven Roasting Method
+Preheat the broiler:
+Set the rack about 6 inches from the heating element.
+
+Prep the tomatillos:
+Remove the papery husks from the tomatillos and rinse well. Cut the tomatillos in half and place cut side down on a foil-lined baking sheet.
+
+Add a few garlic cloves in their skin (if using). Place under a broiler for about 5-7 minutes to lightly blacken the skins of the tomatillos.
+Combine the cooked tomatillos and seasonings, then pulse in a blender:
+Place the cooked tomatillos, lime juice, onions, garlic (if using), cilantro, chili peppers in a blender or food processor and pulse until all ingredients are finely chopped and mixed.
+
+Season and serve:
+Season with salt to taste.
+
+Cool, then refrigerate. Serve with chips or as a salsa accompaniment to Mexican dishes.
+
+Pan Roasting Method
+Blister the tomatillos:
+Coat the bottom of a skillet with a little vegetable oil. Heat on high heat. Place the tomatillos in the pan and sear on one side, then flip over and brown on the other side. Remove from heat.
+
+Combine the cooked tomatillos and seasonings, then pulse in a blender:
+Place the cooked tomatillos, lime juice, onions, garlic (if using), cilantro, chili peppers in a blender or food processor and pulse until all ingredients are finely chopped and mixed.
+
+Season with salt to taste.
+
+Cool, then refrigerate. Serve with chips or as a salsa accompaniment to Mexican dishes.
+
+Boiling Method
+Simmer the tomatillos in a pan:
+Place tomatillos in a saucepan, cover with water. Bring to a boil and simmer for 5 minutes. Remove tomatillos with a slotted spoon.
+
+Combine the cooked tomatillos and seasonings, then pulse in a blender:
+Place the cooked tomatillos, lime juice, onions, garlic (if using), cilantro, chili peppers in a blender or food processor and pulse until all ingredients are finely chopped and mixed.
+
+Season with salt to taste.
+
+Cool, then refrigerate. Serve with chips or as a salsa accompaniment to Mexican dishes.
+
+Nutrition Facts (per serving)
+24
+CALORIES
+1g
+FAT
+5g
+CARBS
+1g
+PROTEIN

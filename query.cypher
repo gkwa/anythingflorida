@@ -22,14 +22,13 @@ RETURN p.name AS ProductName;
 
 // products that have a store associated
 MATCH (p:Product)-[:PURCHASE_AT]->(s:Store)
-RETURN p.name AS ProductName, s.name AS StoreName;
+RETURN p.name AS ProductName, s.name AS StoreName, p.type as Type;
 
 // products whose names contain non-alphanum
 MATCH (p:Product)
 WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
 RETURN p.name AS ProductName;
 
-//
 MATCH (r:Recipe)-[c:CONTAINS]->(p:Product)
 WHERE id(p) IS NULL
 RETURN r.name AS RecipeName, c.quantity AS Quantity, c.urls AS RecipeUrls;
@@ -37,3 +36,23 @@ RETURN r.name AS RecipeName, c.quantity AS Quantity, c.urls AS RecipeUrls;
 MATCH (r:Recipe {name: 'Vegan Thai Red Curry'})-[:CONTAINS]->(p:Product)
 MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
+
+// order products by type
+MATCH (p:Product)-[:PURCHASE_AT]->(s:Store)
+RETURN p.name AS ProductName, s.name AS StoreName, p.type as Type
+ORDER BY toLower(p.type);
+
+// get products that i've not yet assiged a type to
+MATCH (p:Product)
+WHERE p.type IS NULL
+RETURN p.name;
+
+// find products whose type contains chili
+MATCH (p:Product)
+WHERE toLower(p.type) CONTAINS 'chili'
+RETURN p.name AS ProductName, p.type AS Type;
+
+// find products whose type contains peas
+MATCH (p:Product)
+WHERE toLower(p.type) CONTAINS 'pea'
+RETURN p.name AS ProductName, p.type AS Type;

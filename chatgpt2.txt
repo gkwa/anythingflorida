@@ -1,0 +1,68 @@
+I'd like to clean up my neo4j database.
+
+When I give you neo4j cypher query like this:
+CREATE (pastaLinguine:Product { name: "Pasta - Linguine" })
+
+Please rewrite it like this:
+CREATE (pastaLinguine:Product { name: "Linguine", type: "pasta" })
+
+Another example:
+CREATE (peanutButterAdamsUnsalted:Product { name: "Peanut Butter - Adams Unsalted" })
+
+should be
+CREATE (peanutButterAdamsUnsalted:Product { name: "Adams Peanut Butter", type: "Peanut Butter" })
+
+For these two entries, I already have them so don't list them again back to me:
+CREATE (pastaLinguine:Product { name: "Linguine", type: "pasta" })
+CREATE (peanutButterAdamsUnsalted:Product { name: "Peanut Butter - Adams Unsalted" })
+
+Show all results in single code block.
+
+CREATE (a1Sauce:Product { name: "A.1. Sauce" })
+CREATE (allspice:Product { name: "Allspice" })
+CREATE (almondMilksPlease:Product { name: "Almond milks please" })
+CREATE (almondsBulkRoastedOrRawWhicheverIsCheaper:Product { name: "Almonds - bulk roasted or raw -- whichever is cheaper" })
+CREATE (angkorCambodianFoodPasteLemongrass:Product { name: "Angkor Cambodian Food Paste Lemongrass" })
+CREATE (apples:Product { name: "Apples" })
+CREATE (artichokeHearts:Product { name: "Artichoke Hearts" })
+CREATE (asparagus:Product { name: "Asparagus" })
+CREATE (avocadosNotInBagStupid:Product { name: "Avocados (not in bag stupid)" })
+CREATE (bacon:Product { name: "Bacon" })
+CREATE (bakedTofu:Product { name: "Baked Tofu" ,urls:["https://www.google.com/search?sca_esv=579179295&sxsrf=AM9HkKnAjZCHvxR_pYrcL19p0l0Qjk1Zjg:1699032994034&q=Baked+Tofu&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiwrsiQr6iCAxXHHjQIHVGWDjkQ0pQJegQIDRAB&biw=1440&bih=758&dpr=2"]})
+CREATE (bakersDozen:Product { name: "Bakers Dozen" })
+CREATE (bakingCupsInCakeMixflourAisle:Product { name: "Baking Cups in cake mix/flour aisle" })
+CREATE (bakingSoda:Product { name: "Baking Soda" })
+CREATE (ballPowderSmellsNice:Product { name: "Ball powder, smells nice" })
+CREATE (bambooShoots:Product { name: "Bamboo Shoots" })
+CREATE (bananaLeaf:Product { name: 'banana leaf'})
+CREATE (bananasOrganic:Product { name: "Bananas organic" })
+CREATE (barbecueSauceBabyRaysBbqSauce:Product { name: "Barbecue sauce - Baby Rays bbq sauce" })
+CREATE (barley:Product { name: "Barley" })
+CREATE (basilDry:Product { name: "Basil - Dry" })
+CREATE (basilFresh:Product { name: "Basil - Fresh" })
+CREATE (bayLeaf:Product { name: "Bay Leaf" })
+CREATE (beanCannelloniWhite:Product { name: "Bean - Cannelloni White" })
+CREATE (beanGreatNorthernWhite:Product { name: "Bean - Great Northern White" })
+CREATE (beanNavyBean:Product { name: "Bean - Navy Bean" })
+CREATE (beanSprouts:Product { name: 'bean sprouts'})
+CREATE (beansBlack15OzCan:Product { name: "Beans - Black 15 oz can" })
+CREATE (beansBlackBulk:Product { name: "Beans - Black, Bulk" })
+CREATE (beansGreen:Product { name: "Beans - Green" })
+CREATE (beansKidneyBulk:Product { name: "Beans - Kidney (Bulk)" })
+CREATE (beefChuck:Product { name: "Beef Chuck" })
+CREATE (beefChuckShoulderClod:Product { name: "Beef Chuck Shoulder clod" })
+CREATE (beerLagger:Product { name: "Beer - Lagger" })
+CREATE (beerSessionLager:Product { name: "Beer - Session Lager" })
+CREATE (beets:Product { name: "Beets" })
+CREATE (beetsCanned:Product { name: "Beets - Canned" })
+CREATE (bellPepper:Product { name: 'Bell Pepper' })
+CREATE (blueberriesFrozenUponinaBag:Product { name: "Blueberries - frozen uponina bag" })
+CREATE (bokChoy:Product { name: "Bok Choy" })
+CREATE (bonelessChickenThighs:Product {name: 'Boneless Chicken Thighs'})
+CREATE (bonitoFlakes:Product {   name: "Bonito Flakes",   urls: ["https://chefjacooks.com/en/wprm_print/7506",          "https://www.amazon.com/Kaneso-Tokuyou-Hanakatsuo-Bonito-Flakes/dp/B0052BGLMS",          "https://www.google.com/search?sca_esv=577907868&sxsrf=AM9HkKmChgo0Ktu9IlnGTSWuzmK5YqQsiQ:1698696041201&q=Bonito+Flakes&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjy0Pfwx56CAxUBODQIHey0BwcQ0pQJegQIDhAB&biw=1440&bih=758&dpr=2"  ]})
+CREATE (boullionBeef:Product { name: "Boullion - Beef" })
+CREATE (boullionVegetableBrothPowdered:Product { name: "Boullion - Vegetable Broth Powdered" })
+CREATE (breadDavesYumsSeedBread:Product { name: "Bread - Dave's Yums Seed Bread" })
+CREATE (breadFrench:Product { name: "Bread - French" })
+CREATE (breadOlive:Product { name: "Bread - Olive" })
+CREATE (breadPurpleNutsAndGrain:Product { name: "Bread - Purple Nuts And Grain" })
