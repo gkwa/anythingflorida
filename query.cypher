@@ -59,19 +59,10 @@ WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
 RETURN p.name AS ProductName
 ORDER BY RAND();
 
-// find products whose type contains peas
-MATCH (p:Product)
-WHERE toLower(p.type) CONTAINS 'pea'
-RETURN p.name AS ProductName, p.type AS Type;
-
 // list the brand of the product too
 MATCH (p:Product)
-RETURN p.name AS ProductName, p.type AS Type, COALESCE(p.brand, '') AS Brand;
-
-// list the products that aren't marked with a purchase location
-MATCH (product:Product)
-WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
-RETURN product.name;
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN p.name AS ProductName, p.type AS Type, COALESCE(p.brand, '') AS Brand, COLLECT(DISTINCT s.name) AS AvailableAtStores;
 
 // if I were to make recipe Chicken Teriyaki Recipe, then what stores need I visit to get products i'd need for recipe
 MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
@@ -82,3 +73,14 @@ RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
 MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
 OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN p.name AS ProductName, COLLECT(DISTINCT s.name) AS Stores;
+
+// find products whose type contains peas
+MATCH (p:Product)
+WHERE toLower(p.type) CONTAINS 'pea'
+RETURN p.name AS ProductName, p.type AS Type;
+
+// list the products that aren't marked with a purchase location
+MATCH (product:Product)
+WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
+RETURN product.name AS ProductName
+ORDER BY toLower(ProductName);
