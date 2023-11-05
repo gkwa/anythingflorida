@@ -43,11 +43,6 @@ MATCH (p:Product)
 WHERE toLower(p.type) CONTAINS 'chili'
 RETURN p.name AS ProductName, p.type AS Type;
 
-// find products whose type contains vegetable
-MATCH (p:Product)
-WHERE toLower(p.type) CONTAINS 'vegetable'
-RETURN p.name AS ProductName, p.type AS Type;
-
 // products whose names contain non-alphanum
 MATCH (p:Product)
 WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
@@ -69,7 +64,7 @@ MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
 MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
 
-// list the produce even if it doesn't have an assoctiated purchase location
+// list the product even if it doesn't have an assoctiated purchase location
 MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
 OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN p.name AS ProductName, COLLECT(DISTINCT s.name) AS Stores;
@@ -79,8 +74,33 @@ MATCH (p:Product)
 WHERE toLower(p.type) CONTAINS 'pea'
 RETURN p.name AS ProductName, p.type AS Type;
 
+// find products whose type contains vegetable
+MATCH (p:Product)
+WHERE toLower(p.type) CONTAINS 'vegetable'
+RETURN p.name AS ProductName, p.type AS Type;
+
+// some recipes point to the same product multiple times by mistake
+MATCH (p:Product)-[:CONTAINS]->(i:Ingredient)
+WITH p, COLLECT(i) AS ingredients
+WHERE SIZE(ingredients) > 1
+RETURN p, ingredients;
+
 // list the products that aren't marked with a purchase location
 MATCH (product:Product)
 WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
 RETURN product.name AS ProductName
 ORDER BY toLower(ProductName);
+
+// list the products that aren't marked with a purchase location
+MATCH (product:Product)
+WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
+WITH product
+ORDER BY rand()
+LIMIT 10
+RETURN product.name AS ProductName
+ORDER BY ProductName;
+
+// if i would like to make a particular recipe, then what stores do I need to visit?
+MATCH (r:Recipe {name: 'Farro Salad with Artichoke Hearts'})-[:CONTAINS]->(p:Product)
+MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
