@@ -68,12 +68,17 @@ RETURN p.name AS ProductName, p.type AS Type;
 MATCH (p:Product)
 RETURN p.name AS ProductName, p.type AS Type, COALESCE(p.brand, '') AS Brand;
 
-// if I were to make recipe Chicken Teriyaki Recipe, then what stores need I visit to get products i'd need for recipe
-MATCH (r:Recipe {name: 'Chicken Teriyaki Recipe'})-[:CONTAINS]->(p:Product)
-MATCH (p)-[:PURCHASE_AT]->(s:Store)
-RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
-
 // list the products that aren't marked with a purchase location
 MATCH (product:Product)
 WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
-RETURN product.name
+RETURN product.name;
+
+// if I were to make recipe Chicken Teriyaki Recipe, then what stores need I visit to get products i'd need for recipe
+MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
+MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
+
+// list the produce even if it doesn't have an assoctiated purchase location
+MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN p.name AS ProductName, COLLECT(DISTINCT s.name) AS Stores;
