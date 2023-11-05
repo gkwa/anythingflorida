@@ -1,7 +1,7 @@
 I'll give you a recipe and a url and you do the following steps:
 
 Create a neo4j cypher query that creates a recipe node that has a title and url.  Here's an example:
-CREATE (yellowThaiCurry:Recipe { name: 'Yellow Thai Curry', urls: ['https://www.youtube.com/watch?v=JaB3T4HpGE8']})
+CREATE (yellowThaiCurry:Recipe { name: "Yellow Thai Curry", urls: ["https://www.youtube.com/watch?v=JaB3T4HpGE8"]})
 CREATE (thaiCurry1:Recipe { name: "The Best Green Curry", urls: ["https://www.joshuaweissman.com/post/easy-authentic-thai-green-curry", "https://photos.google.com/photo/AF1QipMJV_m1w-qezTjSZAmu6Vam_PKMR6GICW6TJ883"]})
 
 Also you should fetch the ingredients from the recipe and from each
@@ -19,24 +19,26 @@ For each product node you created, create an additional relation that
 indicates that this recipe contains these products. In the relation,
 add the quantity that you took not of.  Here's an example
 
-CREATE (thaiCurry1)-[:CONTAINS { quantity: '1 bunch' }]->(cilantro)
-CREATE (thaiCurry1)-[:CONTAINS { quantity: '3/4 cup' }]->(chickenStock)
-CREATE (thaiCurry1)-[:CONTAINS { quantity: '1 lb' }]->(chickenThigh)
+CREATE (thaiCurry1)-[:CONTAINS { quantity: "1 bunch" }]->(cilantro)
+CREATE (thaiCurry1)-[:CONTAINS { quantity: "3/4 cup" }]->(chickenStock)
+CREATE (thaiCurry1)-[:CONTAINS { quantity: "1 lb" }]->(chickenThigh)
 
 where here thaiCurry1 is the recipe and chickenStock is an ingredient
 
 Also create an person node similar to this:
-CREATE (pailinChongchitnant:Person { name: 'Pailin Chongchitnant', urls: [""] })
+CREATE (pailinChongchitnant:Person { name: "Pailin Chongchitnant", urls: [""] })
 
 If you find the chef in the data that created this recipe, the create
 a relation that tells us who CREATED the recipe similar to this:
 CREATE (pailinChongchitnant)-[:CREATED]->(teriyakiRecipe)
 
 If you're about to create a cypher query like this where the urls list is empty:
-CREATE (palmSugar:Product { name: 'Palm sugar', type: 'Sweeteners', urls: [''] })
+CREATE (palmSugar:Product { name: "Palm sugar", type: "Sweeteners", urls: [""] })
 
 then just leave out the urls list all together...so instead you should create the entry like this:
-CREATE (palmSugar:Product { name: 'Palm sugar', type: 'Sweeteners' })
+CREATE (palmSugar:Product { name: "Palm sugar", type: "Sweeteners" })
+
+Always use double quotes to delimit fields instead of single quotes.
 
 Put all your results and cypher code in a single code block.
 
