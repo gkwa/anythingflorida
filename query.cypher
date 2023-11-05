@@ -7,10 +7,6 @@ MATCH (r:Recipe {name: 'The Best Green Curry'})-[:CONTAINS]->(p:Product)
 MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
 
-MATCH (r:Recipe {name: 'Korean Sesame Noodles'})-[:CONTAINS]->(p:Product)
-MATCH (p)-[:PURCHASE_AT]->(s:Store)
-RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
-
 // ingredients for Chicken Thai Red Curry
 MATCH (r:Recipe {name: 'Chicken Thai Red Curry'})-[:CONTAINS]->(p:Product)
 RETURN p.name;
@@ -23,11 +19,6 @@ RETURN p.name AS ProductName;
 // products that have a store associated
 MATCH (p:Product)-[:PURCHASE_AT]->(s:Store)
 RETURN p.name AS ProductName, s.name AS StoreName, p.type as Type;
-
-// products whose names contain non-alphanum
-MATCH (p:Product)
-WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
-RETURN p.name AS ProductName;
 
 MATCH (r:Recipe)-[c:CONTAINS]->(p:Product)
 WHERE id(p) IS NULL
@@ -52,7 +43,37 @@ MATCH (p:Product)
 WHERE toLower(p.type) CONTAINS 'chili'
 RETURN p.name AS ProductName, p.type AS Type;
 
+// find products whose type contains vegetable
+MATCH (p:Product)
+WHERE toLower(p.type) CONTAINS 'vegetable'
+RETURN p.name AS ProductName, p.type AS Type;
+
+// products whose names contain non-alphanum
+MATCH (p:Product)
+WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
+RETURN p.name AS ProductName;
+
+// products whose names contain non-alphanum sorted randomly to prevent boredom
+MATCH (p:Product)
+WHERE p.name =~ ".*[^a-zA-Z0-9 ].*"
+RETURN p.name AS ProductName
+ORDER BY RAND();
+
 // find products whose type contains peas
 MATCH (p:Product)
 WHERE toLower(p.type) CONTAINS 'pea'
 RETURN p.name AS ProductName, p.type AS Type;
+
+// list the brand of the product too
+MATCH (p:Product)
+RETURN p.name AS ProductName, p.type AS Type, COALESCE(p.brand, '') AS Brand;
+
+// if I were to make recipe Chicken Teriyaki Recipe, then what stores need I visit to get products i'd need for recipe
+MATCH (r:Recipe {name: 'Chicken Teriyaki Recipe'})-[:CONTAINS]->(p:Product)
+MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
+
+// list the products that aren't marked with a purchase location
+MATCH (product:Product)
+WHERE NOT (product)-[:PURCHASE_AT]->(:Store)
+RETURN product.name
