@@ -104,3 +104,22 @@ ORDER BY ProductName;
 MATCH (r:Recipe {name: 'Farro Salad with Artichoke Hearts'})-[:CONTAINS]->(p:Product)
 MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
+
+// if i would like to make a particular recipe, then what stores do I need to visit?
+MATCH (r:Recipe {name: 'Sugar Snap Pea and Carrot Soba Noodles'})-[:CONTAINS]->(p:Product)
+MATCH (p)-[:PURCHASE_AT]->(s:Store)
+RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients;
+
+// if I would like to make a particular recipe, then what stores do I need to visit?
+MATCH (r:Recipe {name: 'Sugar Snap Pea and Carrot Soba Noodles'})-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+WITH p, COLLECT(DISTINCT s) AS stores
+RETURN COLLECT(DISTINCT p.name) AS Ingredients,
+       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores;
+
+// if I would like to make a particular recipe, then what stores do I need to visit?
+MATCH (r:Recipe {name: 'Korean Sesame Noodles'})-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+WITH p, COLLECT(DISTINCT s) AS stores
+RETURN COLLECT(DISTINCT p.name) AS Ingredients,
+       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores;
