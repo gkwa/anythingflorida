@@ -38,6 +38,7 @@ CREATE (yellowThaiCurry:Recipe { name: "Yellow Thai Curry", urls: ["https://www.
 
 // stores
 CREATE (lamsSeafoodAsianMarket:Store { name: "Lam's Seafood Asian Market", urls:["https://www.lamsseafood.com/","https://www.google.com/maps/place/Lam's+Seafood+Market/@47.5980198,-122.3182458,17z/data=!4m14!1m7!3m6!1s0x54906abe335f0c21:0x7357dc323e06b4b1!2sLam's+Seafood+Market!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz!3m5!1s0x54906abe335f0c21:0x7357dc323e06b4b1!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz?entry=ttu"] })
+CREATE (target:Store { name: "Target" })
 CREATE (amazon:Store { name: "Amazon" })
 CREATE (bartell:Store { name: "Bartell" })
 CREATE (centralCoop:Store { name: "Central Co-op" })
@@ -64,6 +65,9 @@ CREATE (vietWah:Store { name: "Viet-Wah Asian Food Market",urls:["https://www.go
 CREATE (wholeFoods:Store { name: "Whole Foods" })
 
 // products
+
+
+
 CREATE (distilledWhiteVinegar:Product { name: "Distilled white vinegar", type: "Vinegar" })
 CREATE (thaiBirdChiles:Product { name: "Thai bird chiles", type: "Chilies",urls:["https://en.wikipedia.org/wiki/Bird%27s_eye_chili","https://www.google.com/search?client=emacs&sca_esv=579702589&sxsrf=AM9HkKlqpOqf2K4ex4TTB1e3ix-WBqYAKQ:1699243036206&q=Thai+bird+chiles&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjHnL3Mva6CAxVaCjQIHdJRCxEQ0pQJegQIDxAB&biw=1440&bih=758&dpr=2#imgrc=u6dinAhHDxTfaM"] })
 CREATE (wideRiceNoodles:Product { name: "Wide rice noodles", type: "Rice Noodles", urls:["https://youtu.be/5odVRW9ldzU?t=323"] })
@@ -86,6 +90,8 @@ CREATE (cookingOil:Product { name: "Cooking oil", type: "Cooking oil"})
 CREATE (chili:Product { name: "Thai chili", type: "Chilies" })
 CREATE (riceNoodleSheets:Product { name: "Rice noodle sheets", type: "Rice noodle sheets", google: "Rice noodle sheets", urls: ["https://www.google.com/search?sca_esv=579554252&sxsrf=AM9HkKlaWKZFra1JEJmQLagqVwu7lOpvPA:1699161392487&q=rice+paper&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwjyhdy5jayCAxWmADQIHTJBBhUQ0pQJegQIDxAB&biw=1440&bih=758&dpr=2","https://balancewithjess.com/hu-tieu-ap-chao/","https://www.google.com/search?q=hu+tieu+xao+rice+sheets&tbm=isch&ved=2ahUKEwjExZejjayCAxU_JjQIHf97ACQQ2-cCegQIABAA&oq=hu+tieu+xao+rice+sheets&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgAQ6BwgAEIoFEEM6BwgAEBgQgARQvQRYpRdgxRpoAHAAeACAATmIAecEkgECMTOYAQCgAQGqAQtnd3Mtd2l6LWltZ8ABAQ&sclient=img&ei=ASVHZYTBDb_M0PEP__eBoAI&bih=758&biw=1440#imgrc=il_S9C1t9kGChM","https://www.foodsofjane.com/recipes/steamed-rice-rolls","https://www.google.com/search?client=emacs&sca_esv=579554252&sxsrf=AM9HkKkMHZcCbxpmpXqsj48WrwEW--xssw:1699161240321&q=Rice+noodle+sheets&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiPypTxjKyCAxW_MDQIHVJjDeYQ0pQJegQIDBAB&biw=1440&bih=758&dpr=2#imgrc=Vw7_7S7XaN_v6M","https://photos.google.com/photo/AF1QipPM6Ts-zLh2dl10ono15alL7hCGwSCHhbOyav6v","https://phohoa.com/","https://www.google.com/search?q=pho+hoa+seattle&oq=pho+hoa+seatt&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyEAgBEC4YrwEYxwEYgAQYjgUyBggCEEUYOTIICAMQABgWGB4yCAgEEC4YFhgeMgoIBRAAGIYDGIoFMgYIBhBFGEDSAQg1Mjk1ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#lpg=cid:CgIgAQ%3D%3D,ik:CAoSLEFGMVFpcE40MXM4TXJDSzlDcFVRZWxBRHZPNUZXb1h5LWtIVFpaeHNnZm03","https://timeline.google.com/maps/timeline?pli=1&rapt=AEjHL4MhNWvrl4xjhvtinEYv8V8WTyxNYgSR-reE9VJgys6Ba7GccWm6B2Xi6Xa3uKxuR9rkftCXiinZ4f3LvAJGF9CnnqgrtUIGNdtCmaP1EhTNElp4eko&pb=!1m2!1m1!1s2023-11-04"]})
 CREATE (basil:Product { name: "Basil", type: "Basil"})
+CREATE (maePloyYellowCurryPaste:Product { brand: "Mae Ploy", name: "Yellow Curry Paste", type: "Curry Paste",urls:["https://www.safeway.com/shop/product-details.960076294.html","https://youtu.be/GC7ccNKatVU?t=696"]})
+CREATE (maePloyGreenCurryPaste:Product { brand: "Mae Ploy", name: "Mae Ploy Green Curry Paste", type: "Curry Paste",urls:["https://youtu.be/GC7ccNKatVU?t=696"]})
 CREATE (maePloyRedCurryPaste:Product { brand: "Mae Ploy", name: "Red Curry Paste", type: "Curry Paste",urls:["https://www.youtube.com/watch?v=d6YbVqqcR4w", "https://www.google.com/search?sca_esv=579549787&sxsrf=AM9HkKn2yZQ4RvsQT3gvUhOknWGy59VJhQ:1699159240924&q=mae+ploy+red+curry+paste&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwiwjuO3hayCAxVdHzQIHSe3B3oQ0pQJegQICRAB&biw=1440&bih=758&dpr=2"]})
 CREATE (aroyDRedCurryPaste:Product { brand: "Aroy D", name: "Red Curry Paste", type: "Curry Paste",urls:["https://www.google.com/search?sca_esv=579549787&sxsrf=AM9HkKlJ1akktSB6XfxzBxrRxM_VM-9vxA:1699158988679&q=aroy-d+red+curry+paste","https://www.youtube.com/watch?v=GC7ccNKatVU"]})
 CREATE (chiliSauce:Product { name: "Chili Sauce", type: "Chili Sauce"})
@@ -1196,6 +1202,7 @@ CREATE (shrimpLargeNotFrozen)-[:PURCHASE_AT]->(seattleSeafood)
 CREATE (signatureSelectBeansGarbanzo15Oz)-[:PURCHASE_AT]->(safeway)
 CREATE (signatureSelectCrackersGrahamHoney)-[:PURCHASE_AT {urls:["https://www.safeway.com/shop/product-details.102011845.html"]}]->(safeway)
 CREATE (skirtSteak)-[:PURCHASE_AT]->(safeway)
+CREATE (skirtSteak)-[:PURCHASE_AT {urls:["https://www.wholefoodsmarket.com/product/meat-beef-skirt-steak-b07883cqv8"]}]->(wholeFoods)
 CREATE (snowPeas)-[:PURCHASE_AT]->(uwajimaya)
 CREATE (sobaNoodles)-[:PURCHASE_AT]->(m2mMart)
 CREATE (sonicareSoftBristles)-[:PURCHASE_AT]->(bartell)
@@ -1288,6 +1295,7 @@ CREATE (yogurtFlyingCowCreameryYogurtInReturnableGlassContainer)-[:PURCHASE_AT]-
 CREATE (yogurtNonfatPlainblueBucket)-[:PURCHASE_AT]->(traderJoes)
 CREATE (yukonGoldPotatoes)-[:PURCHASE_AT]->(safeway)
 CREATE (zucchini)-[:PURCHASE_AT]->(safeway)
+CREATE (maePloyGreenCurryPaste)-[:PURCHASE_AT {urls:["https://www.target.com/p/mae-ploy-green-curry-paste-14oz/-/A-52392046"]}]->(target)
 
 CREATE (tsuyu)-[:IS_THE_SAME_AS]->(kikkomanJapaneseNoodleSoupBaseHonTsuyu)
 
