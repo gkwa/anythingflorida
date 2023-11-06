@@ -1261,7 +1261,6 @@ CREATE (tomatoesSunDriedRealBigJar)-[:PURCHASE_AT]->(safeway)
 CREATE (tomatosInCan15OzCan)-[:PURCHASE_AT]->(safeway)
 CREATE (tortellini)-[:PURCHASE_AT]->(traderJoes)
 CREATE (tortillaFlourLargeDiameterDonPanchoOrSafewayBrand)-[:PURCHASE_AT]->(groceryOutlet)
-CREATE (tsuyu)-[:IS_THE_SAME_AS]->(kikkomanJapaneseNoodleSoupBaseHonTsuyu)
 CREATE (tsuyu)-[:PURCHASE_AT]->(m2mMart)
 CREATE (tumeric)-[:PURCHASE_AT]->(madisonCoop)
 CREATE (tumericPowder)-[:PURCHASE_AT]->(centralCoop)
@@ -1295,6 +1294,8 @@ CREATE (yogurtFlyingCowCreameryYogurtInReturnableGlassContainer)-[:PURCHASE_AT]-
 CREATE (yogurtNonfatPlainblueBucket)-[:PURCHASE_AT]->(traderJoes)
 CREATE (yukonGoldPotatoes)-[:PURCHASE_AT]->(safeway)
 CREATE (zucchini)-[:PURCHASE_AT]->(safeway)
+
+CREATE (tsuyu)-[:IS_THE_SAME_AS]->(kikkomanJapaneseNoodleSoupBaseHonTsuyu)
 
 // people recommending products
 CREATE (pailinChongchitnant)-[:RECOMMENDS {urls:["https://youtu.be/5odVRW9ldzU?t=220"]}]->(fishSauceSquid)
