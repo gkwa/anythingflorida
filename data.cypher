@@ -1,5 +1,4 @@
-MATCH (n)
-DETACH DELETE n;
+MATCH (n) DETACH DELETE n;
 
 // chefs
 CREATE (thirapornGosinanont:Person { name: "Thiraporn Gosinanont", urls: [""] })
@@ -37,7 +36,7 @@ CREATE (yellowCurry:Recipe { name: "Yellow Curry with Chicken", urls: ["https://
 CREATE (yellowThaiCurry:Recipe { name: "Yellow Thai Curry", urls: ["https://www.youtube.com/watch?v=JaB3T4HpGE8"]})
 
 // stores
-CREATE (lamsSeafoodAsianMarket:Store { name: "H Mart Downtown Seattle", origin: "Asian", urls:["https://www.hmartus.com/"] })
+CREATE (hMartDowntownSeattle:Store { name: "H Mart Downtown Seattle", origin: "Asian", urls:["https://www.hmartus.com/"] })
 CREATE (lamsSeafoodAsianMarket:Store { name: "Lam's Seafood Asian Market", urls:["https://www.lamsseafood.com/","https://www.google.com/maps/place/Lam's+Seafood+Market/@47.5980198,-122.3182458,17z/data=!4m14!1m7!3m6!1s0x54906abe335f0c21:0x7357dc323e06b4b1!2sLam's+Seafood+Market!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz!3m5!1s0x54906abe335f0c21:0x7357dc323e06b4b1!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz?entry=ttu"] })
 CREATE (mekongAsianMarket:Store { name: "Mekong Asian Market", origin: "Thai", google_maps: "https://www.google.com/maps/place/Mekong+Asian+Market/@47.5729935,-122.2940276,3a,75y,96.31h,90.74t/data=!3m6!1e1!3m4!1sR-4Meygyj6JToqRL9erUGw!2e0!7i16384!8i8192!4m22!1m15!4m14!1m6!1m2!1s0x54906ace4da929d3:0x6071e1a3c38eff0f!2s1111+15th+Avenue+APT+4,+Seattle,+WA!2m2!1d-122.3132186!2d47.6118881!1m6!1m2!1s0x54906a650a25b1d1:0x7a50e9d481467d60!2s3400+Rainier+Ave+S,+Seattle,+WA+98144!2m2!1d-122.2934722!2d47.5729028!3m5!1s0x54906a650a25b1d1:0x7a50e9d481467d60!8m2!3d47.5729028!4d-122.2934722!16s%2Fg%2F1tgw9m1h?entry=ttu"})
 CREATE (target:Store { name: "Target" })
@@ -67,7 +66,6 @@ CREATE (vietWah:Store { name: "Viet-Wah Asian Food Market",urls:["https://www.go
 CREATE (wholeFoods:Store { name: "Whole Foods" })
 
 // products
-
 CREATE (distilledWhiteVinegar:Product { name: "Distilled white vinegar", type: "Vinegar" })
 CREATE (thaiBirdChiles:Product { name: "Thai bird chiles", type: "Chilies",urls:["https://en.wikipedia.org/wiki/Bird%27s_eye_chili","https://www.google.com/search?client=emacs&sca_esv=579702589&sxsrf=AM9HkKlqpOqf2K4ex4TTB1e3ix-WBqYAKQ:1699243036206&q=Thai+bird+chiles&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjHnL3Mva6CAxVaCjQIHdJRCxEQ0pQJegQIDxAB&biw=1440&bih=758&dpr=2#imgrc=u6dinAhHDxTfaM"] })
 CREATE (wideRiceNoodles:Product { name: "Wide rice noodles", type: "Rice Noodles", urls:["https://youtu.be/5odVRW9ldzU?t=323"] })
@@ -1296,7 +1294,6 @@ CREATE (yogurtNonfatPlainblueBucket)-[:PURCHASE_AT]->(traderJoes)
 CREATE (yukonGoldPotatoes)-[:PURCHASE_AT]->(safeway)
 CREATE (zucchini)-[:PURCHASE_AT]->(safeway)
 CREATE (maePloyGreenCurryPaste)-[:PURCHASE_AT {urls:["https://www.target.com/p/mae-ploy-green-curry-paste-14oz/-/A-52392046"]}]->(target)
-
 CREATE (tsuyu)-[:IS_THE_SAME_AS]->(kikkomanJapaneseNoodleSoupBaseHonTsuyu)
 
 // people recommending products
