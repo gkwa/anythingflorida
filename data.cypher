@@ -37,7 +37,9 @@ CREATE (yellowCurry:Recipe { name: "Yellow Curry with Chicken", urls: ["https://
 CREATE (yellowThaiCurry:Recipe { name: "Yellow Thai Curry", urls: ["https://www.youtube.com/watch?v=JaB3T4HpGE8"]})
 
 // stores
+CREATE (lamsSeafoodAsianMarket:Store { name: "H Mart Downtown Seattle", origin: "Asian", urls:["https://www.hmartus.com/"] })
 CREATE (lamsSeafoodAsianMarket:Store { name: "Lam's Seafood Asian Market", urls:["https://www.lamsseafood.com/","https://www.google.com/maps/place/Lam's+Seafood+Market/@47.5980198,-122.3182458,17z/data=!4m14!1m7!3m6!1s0x54906abe335f0c21:0x7357dc323e06b4b1!2sLam's+Seafood+Market!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz!3m5!1s0x54906abe335f0c21:0x7357dc323e06b4b1!8m2!3d47.5981862!4d-122.316218!16s%2Fg%2F1tdkxcnz?entry=ttu"] })
+CREATE (mekongAsianMarket:Store { name: "Mekong Asian Market", origin: "Thai", google_maps: "https://www.google.com/maps/place/Mekong+Asian+Market/@47.5729935,-122.2940276,3a,75y,96.31h,90.74t/data=!3m6!1e1!3m4!1sR-4Meygyj6JToqRL9erUGw!2e0!7i16384!8i8192!4m22!1m15!4m14!1m6!1m2!1s0x54906ace4da929d3:0x6071e1a3c38eff0f!2s1111+15th+Avenue+APT+4,+Seattle,+WA!2m2!1d-122.3132186!2d47.6118881!1m6!1m2!1s0x54906a650a25b1d1:0x7a50e9d481467d60!2s3400+Rainier+Ave+S,+Seattle,+WA+98144!2m2!1d-122.2934722!2d47.5729028!3m5!1s0x54906a650a25b1d1:0x7a50e9d481467d60!8m2!3d47.5729028!4d-122.2934722!16s%2Fg%2F1tgw9m1h?entry=ttu"})
 CREATE (target:Store { name: "Target" })
 CREATE (amazon:Store { name: "Amazon" })
 CREATE (bartell:Store { name: "Bartell" })
@@ -49,7 +51,7 @@ CREATE (franzBakery:Store { name: "Franz Bakery" })
 CREATE (fredMeyer:Store { name: "Fred Meyer" })
 CREATE (groceryOutlet:Store { name: "Grocery Outlet" })
 CREATE (hardwareStore:Store { name: "Hardware Store" })
-CREATE (hauHauMarket:Store { name: "Hau Hau Market" })
+CREATE (hauHauMarket:Store { name: "Hau Hau Market", origin: "Thai" })
 CREATE (m2mMart:Store { name: "M2M Mart", notes: ["Korean Grocer"], urls: ["https://www.google.com/search?q=m2m+mart&oq=m2&gs_lcrp=EgZjaHJvbWUqCQgAECMYJxiKBTIJCAAQIxgnGIoFMhAIARAuGK8BGMcBGIAEGI4FMgoIAhAuGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAuGLEDGIAEGOUEMg0IBRAAGIMBGLEDGIAEMgoIBhAAGLEDGIAEMgoIBxAAGLEDGIAEMgcICBAAGIAEMgcICRAAGI8C0gEIMjI1N2owajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lpg=cid:CgIgAQ%3D%3D,ik:CAoSLEFGMVFpcE15YzlKMF9jRTJzMFVUUHJjaFlvSUVLcnlCcnlXOFo5akpsR0dD"] })
 CREATE (macrinaBakery:Store { name: "Macrina Bakery" })
 CREATE (madisonCoop:Store { name: "Madison Co-op"})
@@ -65,8 +67,6 @@ CREATE (vietWah:Store { name: "Viet-Wah Asian Food Market",urls:["https://www.go
 CREATE (wholeFoods:Store { name: "Whole Foods" })
 
 // products
-
-
 
 CREATE (distilledWhiteVinegar:Product { name: "Distilled white vinegar", type: "Vinegar" })
 CREATE (thaiBirdChiles:Product { name: "Thai bird chiles", type: "Chilies",urls:["https://en.wikipedia.org/wiki/Bird%27s_eye_chili","https://www.google.com/search?client=emacs&sca_esv=579702589&sxsrf=AM9HkKlqpOqf2K4ex4TTB1e3ix-WBqYAKQ:1699243036206&q=Thai+bird+chiles&tbm=isch&source=lnms&sa=X&ved=2ahUKEwjHnL3Mva6CAxVaCjQIHdJRCxEQ0pQJegQIDxAB&biw=1440&bih=758&dpr=2#imgrc=u6dinAhHDxTfaM"] })

@@ -129,3 +129,12 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores;
+
+MATCH (r:Recipe {name: 'Tomatillo Salsa Verde'})-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+WITH p, COLLECT(DISTINCT s) AS stores
+RETURN COLLECT(DISTINCT p.name) AS Ingredients,
+       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores;
+
+MATCH (n)
+RETURN properties(n) AS node_properties;
