@@ -138,7 +138,7 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY Stores
+ORDER BY [store IN Stores | toLower(store)]
 ;
 
 // if I would like to make a particular recipe, then what stores do I need to visit?
@@ -147,7 +147,7 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY Stores
+ORDER BY [store IN Stores | toLower(store)]
 ;
 
 MATCH (r:Recipe {name: 'Pad See Ew'})-[:CONTAINS]->(p:Product)
@@ -155,7 +155,7 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY Stores
+ORDER BY [store IN Stores | toLower(store)]
 ;
 
 MATCH (r:Recipe {name: 'Pad Thai'})-[:CONTAINS]->(p:Product)
@@ -163,7 +163,7 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY Stores
+ORDER BY [store IN Stores | toLower(store)]
 ;
 
 // list products needed if we were to aggregate two recipes 'Peanut Sauce' and 'Vietnamese Spring Rolls (Gỏi Cuốn)'
@@ -175,4 +175,5 @@ OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY Stores;
+ORDER BY [store IN Stores | toLower(store)]
+;
