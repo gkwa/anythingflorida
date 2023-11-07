@@ -121,44 +121,19 @@ ORDER BY ProductName
 ;
 
 // if i would like to make a particular recipe, then what stores do I need to visit?
-MATCH (r:Recipe {name: 'Farro Salad with Artichoke Hearts'})-[:CONTAINS]->(p:Product)
-MATCH (p)-[:PURCHASE_AT]->(s:Store)
-RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients
-;
-
-// if i would like to make a particular recipe, then what stores do I need to visit?
 MATCH (r:Recipe {name: 'Sugar Snap Pea and Carrot Soba Noodles'})-[:CONTAINS]->(p:Product)
 MATCH (p)-[:PURCHASE_AT]->(s:Store)
 RETURN s.name AS StoreName, COLLECT(DISTINCT p.name) AS Ingredients
 ;
 
-// if I would like to make a particular recipe, then what stores do I need to visit?
-MATCH (r:Recipe {name: 'Sugar Snap Pea and Carrot Soba Noodles'})-[:CONTAINS]->(p:Product)
-OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
-WITH p, COLLECT(DISTINCT s) AS stores
-RETURN COLLECT(DISTINCT p.name) AS Ingredients,
-       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY [store IN Stores | toLower(store)]
-;
+// if I would like to make a particular recipe, then what stores do I
+// need to visit and sort products by stores so I don't have to leave
+// and return because I didn't realize there were two products from the same store
 
-// if I would like to make a particular recipe, then what stores do I need to visit?
+// also, make sure that if a recipe has an item that is not assigned
+// to a store by the PURCAHSE_AT relation, then the store field
+// appears empty as opposed to not seeing the product at all
 MATCH (r:Recipe {name: 'Korean Sesame Noodles'})-[:CONTAINS]->(p:Product)
-OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
-WITH p, COLLECT(DISTINCT s) AS stores
-RETURN COLLECT(DISTINCT p.name) AS Ingredients,
-       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY [store IN Stores | toLower(store)]
-;
-
-MATCH (r:Recipe {name: 'Pad See Ew'})-[:CONTAINS]->(p:Product)
-OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
-WITH p, COLLECT(DISTINCT s) AS stores
-RETURN COLLECT(DISTINCT p.name) AS Ingredients,
-       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
-ORDER BY [store IN Stores | toLower(store)]
-;
-
-MATCH (r:Recipe {name: 'Pad Thai'})-[:CONTAINS]->(p:Product)
 OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
 WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
