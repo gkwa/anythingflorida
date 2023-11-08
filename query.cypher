@@ -14,12 +14,6 @@ MATCH (r:Recipe {name: 'Chicken Thai Red Curry'})-[:CONTAINS]->(p:Product)
 RETURN p.name
 ;
 
-// products that dont have a store associated
-MATCH (p:Product)
-WHERE NOT (p)-[:PURCHASE_AT]->(:Store)
-RETURN p.name AS ProductName
-;
-
 // products that have a store associated
 MATCH (p:Product)-[:PURCHASE_AT]->(s:Store)
 RETURN p.name AS ProductName, s.name AS StoreName, p.type as Type
@@ -141,7 +135,8 @@ RETURN COLLECT(DISTINCT p.name) AS Ingredients,
 ORDER BY [store IN Stores | toLower(store)]
 ;
 
-// list products needed if we were to aggregate two recipes 'Peanut Sauce' and 'Vietnamese Spring Rolls (Gỏi Cuốn)'
+// list products needed if we were to aggregate two recipes 'Peanut Sauce'
+// and 'Vietnamese Spring Rolls (Gỏi Cuốn)'
 MATCH (r:Recipe)
 WHERE r.name IN ['Peanut Sauce', 'Vietnamese Spring Rolls (Gỏi Cuốn)']
 WITH r
@@ -173,4 +168,10 @@ WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
 ORDER BY [store IN Stores | toLower(store)]
+;
+
+// products that don't have a store associated
+MATCH (p:Product)
+WHERE NOT (p)-[:PURCHASE_AT]->(:Store)
+RETURN p.name AS ProductName
 ;
