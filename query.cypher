@@ -151,3 +151,26 @@ WITH p, COLLECT(DISTINCT s) AS stores
 RETURN COLLECT(DISTINCT p.name) AS Ingredients,
        [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
 ORDER BY [store IN Stores | toLower(store)]
+;
+
+MATCH (r:Recipe)
+WHERE r.name IN ['Tom Yum Goong']
+WITH r
+MATCH (r)-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+WITH p, COLLECT(DISTINCT s) AS stores
+RETURN COLLECT(DISTINCT p.name) AS Ingredients,
+       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
+ORDER BY [store IN Stores | toLower(store)]
+;
+
+MATCH (r:Recipe)
+WHERE r.name IN ['Sugar Snap Pea and Carrot Soba Noodles']
+WITH r
+MATCH (r)-[:CONTAINS]->(p:Product)
+OPTIONAL MATCH (p)-[:PURCHASE_AT]->(s:Store)
+WITH p, COLLECT(DISTINCT s) AS stores
+RETURN COLLECT(DISTINCT p.name) AS Ingredients,
+       [store IN stores | CASE WHEN store IS NOT NULL THEN store.name ELSE 'Unknown' END] AS Stores
+ORDER BY [store IN Stores | toLower(store)]
+;
