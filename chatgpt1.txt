@@ -33,10 +33,10 @@ a relation that tells us who CREATED the recipe similar to this:
 CREATE (pailinChongchitnant)-[:CREATED]->(teriyakiRecipe)
 
 If you're about to create a cypher query like this where the urls list is empty:
-CREATE (palmSugar:Product { name: "Palm sugar", type: "Sweeteners", urls: [""] })
+CREATE (palmSugar:Product { name: "Palm sugar", type: "Palm sugar", urls: [""] })
 
 then just leave out the urls list all together...so instead you should create the entry like this:
-CREATE (palmSugar:Product { name: "Palm sugar", type: "Sweeteners" })
+CREATE (palmSugar:Product { name: "Palm sugar", type: "Palm sugar" })
 
 Always use double quotes to delimit fields instead of single quotes.
 
@@ -44,48 +44,98 @@ Put all your results and cypher code in a single code block.
 
 Ok here goes.
 
+Laksa Recipe - Singaporean Curry Noodle Soup (Laksa Lemak) | Asian Recipes
+https://hot-thai-kitchen.com/singaporean-laksa/print/7645/
+https://hot-thai-kitchen.com/singaporean-laksa/
+https://www.youtube.com/watch?v=cWtnFKFiB_0
+
 the recipe url is here:
-https://www.cookerru.com/wprm_print/7756
+https://hot-thai-kitchen.com/singaporean-laksa/print/7645/
 
 reicpe is as follows:
-Go Back Print
 
-Recipe Image
 
-Notes
 
-Nutrition Label
-2
- people
-SmallerNormalLarger
-5 from 23 votes
-10-Minute Zaru Soba (Cold Soba Noodles)
-This quick & easy zaru soba recipe features cold soba noodles dipped in an ultra-flavorful Tsuyu sauce made with only 4 simple ingredients from your pantry! This light and refreshing meal takes just a few minutes to prepare, and truly the ultimate way to cool down on a hot summer day. 
-Prep Time
-5minutes mins
-Cook Time
-5minutes mins
-Total Time
-10minutes mins
-Course: Breakfast, Dinner, Lunch, Meal PrepCuisine: JapaneseServings: 2 peopleCalories: 252kcal
-INGREDIENTS
-2 bundles (200g) soba noodles
-shredded seaweed, toasted sesame flakes for garnish, optional
-green onion, grated daikon, wasabi, and/or egg yolk for the dipping sauce, optional
-Dipping sauce
-1 cup dashi see notes below
-1/4 cup soy sauce
-1/4 cup mirin
-1 tbsp sugar or to taste
-INSTRUCTIONS
-Add dashi, soy sauce, mirin, and sugar into a saucepan and mix to combine. Once the mixture comes to a boil, remove from heat and place in the fridge or freezer to cool.
-Cook noodles according to package instructions. Drain the noodles in a strainer and rinse under cold running water to remove the excess starch. Shake well to drain, transfer to a plate, and garnish to your preference.
-Pour the dipping sauce into a bowl and dress to your liking. Dip a portion of the noodles in the sauce and enjoy!
-NOTES
-To prepare dashi, add 1/2 tsp of instant dashi powder with 1 cup of water and mix to combine. You can also use low-sodium chicken stock, or use a 2:1 ratio of regular chicken stock and water. 
-The dipping sauce is good for up to 2 weeks in the fridge when stored in an airtight container. If you prefer the sauce to be extra cold, place it in the freezer for a few minutes before serving or add a few ice cubes to the sauce. 
-For more ingredient details and serving suggestions, please refer to the blog post above.
-♥ Did you make this recipe?
-Please give it a 5-star rating or leave a comment below to share your experience, or tag @cookerru on Instagram to showcase your creations!
-NUTRITION
-Calories: 252kcal
+Laksa
+Singaporean Laksa - Seafood Curry Noodle Soup
+★★★★★
+4.5 from 4 reviews
+Author: Pailin Chongchitnant Yield: Serves 5-6
+
+
+Ingredients
+Laksa Paste:
+
+15 g mild dried chilies
+3 Tbsp dried shrimp
+Scant 1/4 cup candlenuts or macadamia nuts
+2 Thai chilies, or to taste
+8 cloves garlic
+½ cup shallots
+1 stalk lemongrass
+10 slices galangal
+2-inch turmeric
+1 -1 ½ Tbsp fermented shrimp paste (belacan)
+Broth
+
+350 g head-on, shell-on shrimp, peel, devein and save the shells and heads
+5 cups water
+1 lb clams
+1 recipe laksa paste (above)
+1 ½ cup coconut milk
+2 Tbsp fish sauce, to taste
+1 Tbsp sugar, to taste
+The Rest (amounts are up to you)
+
+Thick round rice noodles (~50g dry weight per person)
+Fish cakes
+Tofu puffs, cut in half or quarters
+Beansprouts
+Laksa leaves (a.k.a. Vietnamese coriander or rau ram, you can use a combination of Thai basil and mint as a sub)
+Sambal for serving, optional (see note)
+Note: Sambal is a general term for spicy chili paste, and it is often served alongside laksa in case you want to add some heat. There are many types of sambal that you can buy at Asian grocery stores, the most common one being Sambal Oelek (green lid, rooster brand) which you can use, but that one is mostly spicy without adding much flavour. Other sambal varieties can be made with more herbs and seasoning, making them more flavourful. One I like is sambal belacan which is made with shrimp paste, so the flavour goes particularly well with laksa. 
+
+Ingredients and Kitchen Tools I Use
+
+
+
+Instructions
+For the noodles:
+Soak noodles in hot tap water for 30 minutes (or 1 hour if using room temp water) until it is completely soft and pliable. Drain and cut into small pieces (1-2 inch long) using and sharp chef's knife. **You can save the noodle cooking to the last minute so you don't need to reheat them for serving, recommended if serving several bowls at a time. Or you can cook them in advance to get it out of the way.
+
+To cook the noodles, boil them in plain water for 2-3 minutes, just until they're cooked through but still a bit chewy in the middle. If using right away, divide them into serving bowls, if not, add them to a big bowl of cold water to cool, then drain well. You can make the noodles up to a few days in advance and keep them well-sealed in the fridge.
+
+For the shrimp stock:
+Add the shrimp shells and head to a stock pot. Saute the heads and shells over medium heat, pressing out the tomalley in the head, until bits stuck to the bottom start to brown and smells like shrimp on the grill! Add 4 cups of water then take a mental note of wheat that level looks like in your pot, this will come in handy, trust me. Add the remaining 1 cup of water, scrape the browned bits off the bottom of the pot and simmer the stock gently for about 45 mins.
+
+After simmering, you should have about 4 cups of stock left in the pot (see mental note), if you have less, add a bit of water to make up the shortfall. If you have a bit too much don't worry about it.
+
+Fish out the shells, then bring the stock to a full boil. Add the clams, cover and cook for about 1 minute or just until they open. Do not over cook clams or they will become tough! Remove clams with a slotted skimmer and let them cool. Keep clams chilled in fridge till ready to use. If you find clams that did not open, put them back into the pot and cook for 1-2 minutes longer, some clams are just late bloomers! If they still don't open after 2 minutes, discard them.
+
+For the curry paste:
+Add dried chilies and dried shrimp into a coffee grinder and blitz until fine. Add candlenuts or macadamia nuts, if using, and blitz until fine. In a blender, add all remaining ingredients and blend until smooth (if using a jug blender, you may need to add a little liquid to get it going). Add the dried stuff and and blend to mix. The paste can be made in advance and freeze.
+
+To make the laksa broth:
+In a heavy bottomed pot, add just enough oil to coat the bottom, then add the curry paste and saute for a few minutes until the paste is thickened and oil starts to sizzle away from the paste. Stir in the coconut milk and the seafood stock and simmer for at least 10 minutes to allow the flavours to mingle and develop. Season with fish sauce and sugar, then taste and adjust seasoning. You can also adjust the richness of the broth at this point by adding more water to lighten, or more coconut milk to enrich. 
+
+The broth can be made in advance and kept in the fridge for up to a week.
+
+To assemble:
+Bring the broth to a boil and add tofu puffs. Place noodles (if they need reheating) and beansprouts in a noodle strainer and briefly heat them in the broth for 15-30 seconds. Add to serving bowls. Add shrimp and fish cakes to the strainer and cook in the broth until shrimp are cooked, add to the bowls.
+
+Pour the broth over noodles, grabbing some tofu puffs on the way out when you ladle the broth. 
+
+Add clams onto noodles and sprinkle on laksa leaves. Serve with extra sambal for spiciness if needed.
+
+If making several bowls at a time, to be more efficient I would just dump all of the noodles into a separate pot of hot water to reheat, then drain and divide noodles amongst bowls. Cook all the tofu puffs, shrimp, and fish cakes all at the same time in the broth, fish them out and divide them amongst bowls. Then pour the soup over each bowl. 
+
+Join us on Patreon for bonus content & rewards!
+
+Find it online: https://hot-thai-kitchen.com/singaporean-laksa/
+
+
+
+
+
+Close ad
+
