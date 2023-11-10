@@ -1045,7 +1045,7 @@ CREATE (gingerSesameDressing)-[:CONTAINS { quantity: "4 tbsp" }]->(nutButter)
 
 CREATE (blackBeanSoup)-[:CONTAINS { quantity: "1 medium" }]->(onion)
 CREATE (blackBeanSoup)-[:CONTAINS { quantity: "1 small" }]->(redOnion)
-CREATE (blackBeanSoup)-[:CONTAINS { quantity: "1 tablespoon" }]->(cuminGround)
+CREATE (blackBeanSoup)-[:CONTAINS { quantity: "1 tablespoon" }]->(cumin)
 CREATE (blackBeanSoup)-[:CONTAINS { quantity: "1/4 cup" }]->(cilantro)
 CREATE (blackBeanSoup)-[:CONTAINS { quantity: "2 cans" }]->(beansBlackBulk)
 CREATE (blackBeanSoup)-[:CONTAINS { quantity: "2 cups" }]->(chickenBroth)
