@@ -1,6 +1,13 @@
-MATCH (n) DETACH DELETE n;
+MATCH (n) DETACH DELETE n
+;
 
-CREATE (yellowCurry)-[:CONTAINS { quantity: "1 tsp" }]->(cumin)
+CREATE (yellowCurry:Recipe {name: "Yellow Curry with Chicken"})-[:CONTAINS { quantity: "1 tsp" }]->(cumin:Product)
 ;
 
 MATCH (n) RETURN n
+;
+
+MATCH (recipe:Recipe)-[contains:CONTAINS]->(product:Product)
+WHERE product.name IS NULL
+RETURN recipe.name
+;
