@@ -1,5 +1,4 @@
-MATCH (n) DETACH DELETE n
-;
+MATCH (n) DETACH DELETE n;
 
 // chefs
 CREATE (charityFerreira:Person { name: 'Charity Ferreira' })
@@ -28,7 +27,7 @@ CREATE (blackBeanSoup:Recipe { name: "Easy Black Bean Soup", urls: ["https://www
 CREATE (chickenThaiRedCurry:Recipe { name: "Chicken Thai Red Curry", urls: ["https://theflavoursofkitchen.com/wprm_print/104534"] })
 CREATE (coldSobaWithPerillaOilDressing:Recipe { name: "Cold Soba With Periall Oil dresssing", urls:["https://food52.com/recipes/print/86501", "https://www.youtube.com/watch?v=VpAS3RarPi8"]})
 CREATE (crispyBakedTofu:Recipe { name: "Crispy Baked Tofu", urls: ["https://cleananddelicious.com/wprm_print/26940"] })
-CREATE (drunkenNoodles:Recipe { name: "The Best Drunken Noodles", urls: ["https://seonkyounglongest.com/drunken-noodles/"] })
+CREATE (drunkenNoodles:Recipe { name: "The Best Drunken Noodles", urls: ["https://seonkyounglongest.com/drunken-noodles/","https://seonkyounglongest.com/drunken-noodles/print/27100/"] })
 CREATE (farroSalad:Recipe { name: "Farro Salad with Artichoke Hearts", urls: ["https://www.williams-sonoma.com/recipe/farro-salad-with-artichoke-hearts.html?print=true"] })
 CREATE (gingerSesameDressing:Recipe { name: "Ginger Sesame Dressing", urls: ["https://www.meghanlivingstone.com/ginger-sesame-dressing/", "https://www.meghanlivingstone.com/wprm_print/2060"] })
 CREATE (greekChickpeaSalad:Recipe { name: "The Easiest Chickpea Greek Salad", urls: ["https://www.ambitiouskitchen.com/wprm_print/24776"] })
@@ -874,7 +873,7 @@ CREATE (koreanSesameNoodles)-[:CONTAINS {quantity: "a few slices (optional)"}]->
 
 CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1 Red Bell Pepper" }]->(redBellPepper)
 CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1 cup" }]->(zucchini)
-CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1 stalk" }]->(lemonGrass)
+CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1 stalk" }]->(lemongrass)
 CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1 teaspoon Ginger minced" }]->(ginger)
 CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "1.5 cup" }]->(coconutMilk)
 CREATE (chickenThaiRedCurry)-[:CONTAINS { quantity: "2 tablespoons" }]->(oil)
@@ -952,25 +951,23 @@ CREATE (thaiEggplantRecipe)-[:CONTAINS]->(turmeric)
 
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 clove" }]->(garlic)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 lb" }]->(riceNoodleSheets)
-CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 tbsp" }]->(fishSauce)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 tbsp" }]->(soySauce)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 to 5" }]->(chili)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 tsp" }]->(darkSoySauce)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 tsp" }]->(fishSauce)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1 wedge" }]->(lime)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1" }]->(redChilliPeppers)
-CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1" }]->(shallot)
+CREATE (drunkenNoodles)-[:CONTAINS { quantity: "1" }]->(shallots)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "2 tbsp" }]->(cookingOil)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "2 tbsp" }]->(oysterSauce)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "2 tbsp" }]->(palmSugar)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "6 oz" }]->(chineseBroccoli)
-CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(beef)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(chicken)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(pork)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(shrimp)
+CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(shrimp)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "8 oz" }]->(tofu)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "Handful" }]->(basil)
-CREATE (drunkenNoodles)-[:CONTAINS { quantity: "pinch" }]->(whitePepper)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: "pinch" }]->(whitePepper)
 
 CREATE (peanutSauce)-[:CONTAINS { quantity: "1 Tbsp." }]->(riceVinegar)
@@ -1614,4 +1611,3 @@ CREATE (seonkyoungLongest)-[:CREATED]->(drunkenNoodles)
 CREATE (seonkyoungLongest)-[:CREATED]->(sesameNoodleRecipe)
 CREATE (tessaMorales)-[:CREATED]->(blackBeanSoup)
 CREATE (thirapornGosinanont)-[:CREATED]->(padSeeEw)
-
