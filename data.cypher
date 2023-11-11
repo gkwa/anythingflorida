@@ -1,4 +1,5 @@
-MATCH (n) DETACH DELETE n;
+MATCH (n) DETACH DELETE n
+;
 
 // chefs
 CREATE (charityFerreira:Person { name: 'Charity Ferreira' })
@@ -657,7 +658,7 @@ CREATE (springRolls)-[:CONTAINS { quantity: "15" }]->(ricePaperSheets)
 CREATE (springRolls)-[:CONTAINS { quantity: "2 Tbsp" }]->(limeJuice)
 CREATE (springRolls)-[:CONTAINS { quantity: "2 tsp" }]->(huyFongChiliGarlicSauce)
 CREATE (springRolls)-[:CONTAINS { quantity: "2 tsp" }]->(riceWineVinegar)
-CREATE (springRolls)-[:CONTAINS { quantity: "2 tsp" }]->(sesameOi)
+CREATE (springRolls)-[:CONTAINS { quantity: "2 tsp" }]->(sesameOil)
 CREATE (springRolls)-[:CONTAINS { quantity: "2" }]->(carrots)
 CREATE (springRolls)-[:CONTAINS { quantity: "3 oz" }]->(riceNoodles)
 
