@@ -50,6 +50,8 @@ CREATE (phadThai)-[:CONTAINS]->(roastedUnsaltedPeanuts)
 CREATE (seonkyoungLongest)-[:CREATED]->(drunkenNoodles)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: 'Handful' }]->(basil)
 CREATE (drunkenNoodles)-[:CONTAINS { quantity: '1 wedge' }]->(lime)
+CREATE (drunkenNoodles)-[:CONTAINS { quantity: '1 wedge' }]->(lime)
+CREATE (drunkenNoodles)-[:CONTAINS { quantity: 'stuff' }]->(limes)
 
 CREATE (yellowThaiCurry)-[:CONTAINS]->(kaffirLime)
 
@@ -64,6 +66,9 @@ CREATE (pailinChongchitnant)-[:RECOMMENDS {urls:["https://youtu.be/5odVRW9ldzU?t
 
 CREATE (proHomeCooks)-[:CREATED]->(teriyakiRecipe)
 CREATE (eliseBauer)-[:CREATED]->(salsaVerde)
-CREATE (recipetineats)-[:CREATED]->(yellowThaiCurry);
+CREATE (recipetineats)-[:CREATED]->(yellowThaiCurry)
+;
 
-MATCH (n) RETURN n
+MATCH (r)-[:CONTAINS]->(p)
+WHERE p.name IS NULL
+RETURN r.name
