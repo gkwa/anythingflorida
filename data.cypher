@@ -1087,7 +1087,7 @@ CREATE (prikNamPla)-[:CONTAINS { quantity: "2 tablespoon" }]->(limeJuice)
 CREATE (prikNamPla)-[:CONTAINS { quantity: "3 cloves" }]->(garlic)
 
 CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1 can (18oz/540ml)" }]->(pintoBeans)
-CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1 tsp" }]->(cumin)
+CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1 tsp" }]->(groundCumin)
 CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1" }]->(tomato)
 CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1/2 tsp" }]->(chipotlePowder)
 CREATE (mexicanPintoBeans)-[:CONTAINS { quantity: "1/2 tsp" }]->(coriander)
