@@ -104,17 +104,13 @@ CREATE (uwajimaya:Store { name: "Uwajimaya", urls: ["https://www.uwajimaya.com/"
 CREATE (wholeFoods:Store { name: "Whole Foods" })
 
 // products
-CREATE (gochugaru:Product { name: "Gochugaru", type: "Korean Red Pepper Flakes" })
 CREATE (greenChili:Product { name: "Green Chili", type: "Green Chili" })
 CREATE (greenOnions:Product { name: "Green Onions", type: "Green Onions" })
 CREATE (hondashi:Product { name: "Hondashi", type: "Japanese Smoked Bonito Seasoning" })
 CREATE (maesilaeck:Product { name: "Maesilaeck", type: "Korean Green Plum Extract" })
 CREATE (matGanjang:Product { name: "Mat-ganjang", type: "Korean Flavored Soy Sauce" })
-CREATE (mirin:Product { name: "Mirin", type: "Mirin" })
 CREATE (redChili:Product { name: "Red Chili", type: "Red Chili" })
 CREATE (sesameOil:Product { name: "Sesame Oil", type: "Sesame Oil" })
-CREATE (sesameSeeds:Product { name: "Sesame Seeds", type: "Sesame Seeds" })
-CREATE (smokedPaprika:Product { name: "Smoked Paprika", type: "Smoked Paprika" })
 CREATE (udonNoodles:Product { name: "Udon Noodles", type: "Udon Noodles" })
 
 CREATE (a1Sauce:Product { name: "A.1. Sauce", type: "A.1. Sauce" })
